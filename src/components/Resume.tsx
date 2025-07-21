@@ -10,7 +10,7 @@ function Resume () {
             alignItems: 'center'
         }}>
             <iframe
-                src={"/pdfs/codequest-poster.pdf"}
+                src={"/pdfs/resume2024.pdf"}
                 width="100%"
                 height="100%"
                 style={{ border: 'none' }}

@@ -24,11 +24,27 @@ function LabNotebook({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
         <Card sx={{ width: cardSize }}>
             <CardHeaders 
                 title={"Knowledge Extraction from Archival Lab Notebooks"}
-                dates={"July - December 2024"}
+                dates={"July 2024 - December 2024"}
                 setCardSize={setCardSize}/>
             <Box sx={{ height: boxSize, overflow: 'auto' }}>
                 <Typography level="body-lg">
-                    Here is my description of what this project is
+                    I worked on a research project focused on using AI to make decades of handwritten
+                    chemistry lab notebooks computationally ready and determine if there exists any 
+                    patterns in the data that separate successful and unsuccessful experiments. These 
+                    notebooks contain data on metal-organic framework synthesis (MOFs), which are 
+                    compounds of interest for their possible application to gas purification/separation, 
+                    water remediation, and as conducting solids and super capacitors. Our team, supported
+                    by Drexel University and funded by ID4, worked on developing a system that converts 
+                    digital scans of these analog notebooks into structured, AI-ready datasets. Using 
+                    Detectron2, I trained and fine-tuned computer vision models to segment notebooks 
+                    into meaningful regions, like text, tables, and reaction diagrams. From there I 
+                    took note of results from each page and calculated the True Positive, False Positive,
+                    False Negative, Recall, Precision, and F1 values per notebook and object type. I 
+                    then researched information extraction techniques to identify and refine experimental 
+                    entries for future computational analysis. Our work was published through IEEE 
+                    Big Data, representing an early step towards building frameworks that can preserve 
+                    and analyze scientific history. This project introduced me to machine learning, 
+                    and real-world applications of AI.
                 </Typography>
             </Box>
             <Stack direction="row" 
@@ -43,7 +59,7 @@ function LabNotebook({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
                     alignItems: 'center'
                   }}>
                     <span style={{fontWeight: "bold"}}>Skills</span>
-                    : Machine Learning • Python
+                    : Machine Learning • Python • Detectron2 • IEEE Big Data Publication
                 </Typography>
                 <Stack direction={"row"} spacing={2}>
                     <Button 
