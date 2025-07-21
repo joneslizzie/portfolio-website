@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.menu-container {
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content {
+  padding: 20px 40px;
+}
