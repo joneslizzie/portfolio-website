@@ -1,9 +1,48 @@
-import { Button, Input, Stack, Typography } from "@mui/joy";
+import { Box, Button, Input, Stack, Typography } from "@mui/joy";
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { ChangeEvent, FormEvent, useState } from "react";
 
 function ContactMe() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+    
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+    
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        const form = e.target as HTMLFormElement;
+        const formDataToSend = new FormData(form);
+
+        const params = new URLSearchParams();
+        formDataToSend.forEach((value, key) => {
+            params.append(key, value.toString());
+        });
+        
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: params.toString(),
+        })
+        .then(() => {
+            alert('Message sent successfully!');
+            setFormData({ name: '', email: '', message: '' });
+        })
+        .catch((error) => {
+            alert('Error sending message. Please try again.');
+        });
+    };
+    
     return (
         <div className="main-content">
             <Stack direction={"column"} spacing={1} 
@@ -18,36 +57,53 @@ function ContactMe() {
                     Feel free to contact me with any inquires or questions!
                 </Typography>
             </Stack>
-            <Stack direction={"column"} spacing={1}>
+            <Box component="form" name="contact" method="POST" data-netlify="true" 
+                onSubmit={handleSubmit}
+            >
                 <Typography level="title-lg">
                     Name
                 </Typography>
-                <Input placeholder="" />
+                <Input 
+                    placeholder="" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                />
                 <Typography level="title-lg">
                     Email Address
                 </Typography>
-                <Input placeholder="" />
+                <Input 
+                    placeholder="" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                />
                 <Typography level="title-lg">
                     Message
                 </Typography>
-                <Input placeholder="" />
+                <Input 
+                    placeholder="" 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                />
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Button>Submit</Button>
                 </div>
-                <Stack direction={"row"} sx={{justifyContent: "center", alignItems: "center"}}>
-                    <Button 
-                        variant="plain" size="sm"
-                        onClick={() =>
-                            window.open("https://www.linkedin.com/in/elizabeth-jones-2o26/")}>
-                            <LinkedInIcon />
-                    </Button>
-                    <Button
-                        variant="plain" size="sm"
-                        onClick={() =>
-                            window.open("https://github.com/joneslizzie")}>
-                            <GitHubIcon />
-                    </Button>
-                </Stack>
+            </Box>
+            <Stack direction={"row"} sx={{justifyContent: "center", alignItems: "center"}}>
+                <Button 
+                    variant="plain" size="sm"
+                    onClick={() =>
+                        window.open("https://www.linkedin.com/in/elizabeth-jones-2o26/")}>
+                        <LinkedInIcon />
+                </Button>
+                <Button
+                    variant="plain" size="sm"
+                    onClick={() =>
+                        window.open("https://github.com/joneslizzie")}>
+                        <GitHubIcon />
+                </Button>
             </Stack>
         </div>
     )
