@@ -85,7 +85,7 @@ function ContactMe() {
                     required
                 /> <br />
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <Button>Submit</Button>
+                <Button type="submit">Submit</Button>
                 </div>
             </Box>
             <Stack direction={"row"} sx={{justifyContent: "center", alignItems: "center"}}>
