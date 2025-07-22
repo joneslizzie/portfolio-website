@@ -7,16 +7,13 @@ import React from "react";
 
 function LabNotebook({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('48vw');
-    const [boxSize, setBoxSize] = useState<number>(300);
+    const [cardSize, setCardSize]  = useState<string>('93vw');
 
     React.useEffect(() => {
         if(cardSize === '48vw') {
             rowToggle(false);
-            setBoxSize(300);
         } else {
             rowToggle(true);
-            setBoxSize(200);
         }
     }, [cardSize, rowToggle]);
     
@@ -26,7 +23,7 @@ function LabNotebook({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
                 title={"Knowledge Extraction from Archival Lab Notebooks"}
                 dates={"July 2024 - December 2024"}
                 setCardSize={setCardSize}/>
-            <Box sx={{ height: boxSize, overflow: 'auto' }}>
+            <Box sx={{ height: 250, overflow: 'auto' }}>
                 <Typography level="body-lg">
                     I worked on a research project focused on using AI to make decades of handwritten
                     chemistry lab notebooks computationally ready and determine if there exists any 

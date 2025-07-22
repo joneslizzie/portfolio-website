@@ -46,3 +46,12 @@
 .main-content {
   padding: 20px 40px;
 }
+
+@media (max-width: 767px) {
+  .mobile-hidden-button {
+    display: none;
+  }
+  .skills-content {
+    display: 'block'
+  }
+}

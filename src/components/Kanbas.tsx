@@ -6,16 +6,13 @@ import React from "react";
 
 function Kanbas({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('48vw');
-    const [boxSize, setBoxSize] = useState<number>(300);
+    const [cardSize, setCardSize]  = useState<string>('93vw');
 
     React.useEffect(() => {
         if(cardSize === '48vw') {
             rowToggle(false);
-            setBoxSize(300);
         } else {
             rowToggle(true);
-            setBoxSize(200);
         }
     }, [cardSize, rowToggle]);
     
@@ -25,7 +22,7 @@ function Kanbas({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
                 title={"Kanbas"}
                 dates={"September 2024 - December 2024"}
                 setCardSize={setCardSize}/>
-            <Box sx={{ height: boxSize, overflow: 'auto' }}>
+            <Box sx={{ height: 250, overflow: 'auto' }}>
                 <Typography level="body-lg">
                     This project involved designing and building Kanbas, a platform inspired by Canvas. 
                     Over the course of the semester, I developed Kanbas to support multiple user roles

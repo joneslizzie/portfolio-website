@@ -7,16 +7,13 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function CookingGame({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('48vw');
-    const [boxSize, setBoxSize] = useState<number>(300);
+    const [cardSize, setCardSize]  = useState<string>('93vw');
 
     React.useEffect(() => {
         if(cardSize === '48vw') {
             rowToggle(false);
-            setBoxSize(300);
         } else {
             rowToggle(true);
-            setBoxSize(200);
         }
     }, [cardSize, rowToggle]);
     
@@ -26,7 +23,7 @@ function CookingGame({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
                 title={"Cooking Game"}
                 dates={"November 2023"}
                 setCardSize={setCardSize}/>
-            <Box sx={{ height: boxSize, overflow: 'auto' }}>
+            <Box sx={{ height: 250, overflow: 'auto' }}>
                 <Typography level="body-lg">
                 This project involved applying computer vision techniques to drive animation in an 
                 interactive game. The objective was to extract motion data from a video of a monkey 

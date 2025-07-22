@@ -8,15 +8,12 @@ import React from "react";
 
 function CodeQuest({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('48vw');
-    const [boxSize, setBoxSize] = useState<number>(300);
+    const [cardSize, setCardSize]  = useState<string>('93vw');
     React.useEffect(() => {
         if(cardSize === '48vw') {
             rowToggle(false);
-            setBoxSize(300);
         } else {
             rowToggle(true);
-            setBoxSize(200);
         }
     }, [cardSize, rowToggle]);
 
@@ -26,7 +23,7 @@ function CodeQuest({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>})
                 title={"CodeQuest"}
                 dates={"October 2024 - December 2024"}
                 setCardSize={setCardSize}/>
-            <Box sx={{ height: boxSize, overflow: 'auto' }}>
+            <Box sx={{ height: 250, overflow: 'auto' }}>
                 <Typography level="body-lg">
                     CodeQuest is a full-stack Q&A platform for software learners to ask questions, 
                     join communities based on interests, and connect with peers. My team and I built 

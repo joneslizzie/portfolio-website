@@ -8,11 +8,11 @@ function CardHeaders({title, dates, setCardSize} : {
     dates: string, 
     setCardSize: Dispatch<SetStateAction<string>>,
 }) {
-    const [full, setFull] = useState<boolean>(true);
+    const [full, setFull] = useState<boolean>(false);
     const toggleCardSize = () => {
         setFull(!full)
         if(full)
-            setCardSize('95vw')
+            setCardSize('93vw')
         else
             setCardSize('48vw')
     }
