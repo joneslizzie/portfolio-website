@@ -64,29 +64,26 @@ function ContactMe() {
                     Name
                 </Typography>
                 <Input 
-                    placeholder="" 
-                    value={formData.name}
+                    placeholder={formData.name}
                     onChange={handleChange}
                     required
-                />
+                /> <br />
                 <Typography level="title-lg">
                     Email Address
                 </Typography>
                 <Input 
-                    placeholder="" 
-                    value={formData.email}
+                    placeholder={formData.email}
                     onChange={handleChange}
                     required
-                />
+                /> <br />
                 <Typography level="title-lg">
                     Message
                 </Typography>
                 <Input 
-                    placeholder="" 
-                    value={formData.message}
+                    placeholder={formData.message}
                     onChange={handleChange}
                     required
-                />
+                /> <br />
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                 <Button>Submit</Button>
                 </div>
