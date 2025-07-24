@@ -6,7 +6,7 @@ import React from "react";
 
 function Kanbas({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('93vw');
+    const [cardSize, setCardSize]  = useState<string>('48vw');
 
     React.useEffect(() => {
         if(cardSize === '48vw') {
@@ -51,7 +51,7 @@ function Kanbas({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
                     alignItems: 'center'
                   }}>
                     <span style={{fontWeight: "bold"}}>Skills</span>
-                    : React • Full Stack
+                    : React • Javascript • Full Stack
                 </Typography>
                 <Stack direction={"row"} spacing={2}>
                     <Tooltip title="backend" variant="plain">

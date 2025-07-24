@@ -8,7 +8,7 @@ import React from "react";
 
 function CodeQuest({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('93vw');
+    const [cardSize, setCardSize]  = useState<string>('48vw');
     React.useEffect(() => {
         if(cardSize === '48vw') {
             rowToggle(false);

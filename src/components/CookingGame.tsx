@@ -7,7 +7,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function CookingGame({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
 
-    const [cardSize, setCardSize]  = useState<string>('93vw');
+    const [cardSize, setCardSize]  = useState<string>('48vw');
 
     React.useEffect(() => {
         if(cardSize === '48vw') {

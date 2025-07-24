@@ -47,11 +47,18 @@
   padding: 20px 40px;
 }
 
-@media (max-width: 767px) {
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 10px 30px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .main-content {
+    padding: 10px 30px;
+  }
   .mobile-hidden-button {
     display: none;
-  }
-  .skills-content {
-    display: 'block'
   }
 }

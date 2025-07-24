@@ -109,7 +109,7 @@ function Experience() {
                 concepts clearly, think on my feet, and foster curiosity and confidence in young
                 students.
             </Typography>
-            <Typography level="body-sm" color="primary" variant="soft" 
+            <Typography level="body-sm" color="primary" variant="soft"
                    sx={{ 
                     display: 'inline-flex', 
                     padding: '5px',

@@ -8,7 +8,7 @@ function CardHeaders({title, dates, setCardSize} : {
     dates: string, 
     setCardSize: Dispatch<SetStateAction<string>>,
 }) {
-    const [full, setFull] = useState<boolean>(false);
+    const [full, setFull] = useState<boolean>(true);
     const toggleCardSize = () => {
         setFull(!full)
         if(full)
@@ -28,10 +28,10 @@ function CardHeaders({title, dates, setCardSize} : {
                 {title}
             </Typography>
             { full ? 
-            <Button variant="plain" color="neutral" onClick={(toggleCardSize)}>
+            <Button variant="plain" color="neutral" onClick={(toggleCardSize)} className="mobile-hidden-button">
                 <OpenInFullIcon />
             </Button> : 
-            <Button variant="plain" color="neutral" onClick={(toggleCardSize)}>
+            <Button variant="plain" color="neutral" onClick={(toggleCardSize)} className="mobile-hidden-button">
                 <CloseFullscreenIcon />
             </Button>}
             </Stack>

@@ -6,10 +6,10 @@ import CookingGame from "./CookingGame";
 import Kanbas from "./Kanbas";
 
 function Projects() {
-    const [labNotebooksExpanded, setLabNotebooksExpanded] = useState<boolean>(false);
-    const [codequestExpanded, setCodequestExpanded] = useState<boolean>(false);
-    const [cookinggameExpanded, setCookinggameExpanded] = useState<boolean>(false);
-    const [kanbasExpanded, setKanbasExpanded] = useState<boolean>(false);
+    const [labNotebooksExpanded, setLabNotebooksExpanded] = useState<boolean>(true);
+    const [codequestExpanded, setCodequestExpanded] = useState<boolean>(true);
+    const [cookinggameExpanded, setCookinggameExpanded] = useState<boolean>(true);
+    const [kanbasExpanded, setKanbasExpanded] = useState<boolean>(true);
 
     return (
         <div className="main-content">
