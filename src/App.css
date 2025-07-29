@@ -47,18 +47,41 @@
   padding: 20px 40px;
 }
 
+.skills { 
+  display: 'flex';
+  overscroll-behavior-inline: auto;
+  padding: '5px';
+  margin: 5px;
+  align-items: 'center';
+}
+
+.skills-buttons-container {
+  display: "flex";
+  justify-content: "space-between";
+  align-items: "center";
+}
+
 
 @media (max-width: 768px) {
   .menu-container {
     padding: 10px 30px;
     background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: auto;
   }
 
   .main-content {
     padding: 10px 30px;
+    overflow: auto;
   }
   .mobile-hidden-button {
     display: none;
+  }
+  .skills { 
+    display: 'inline';
+    align-items: 'center';
+    max-block-size: 30px;
+    min-width: 50px;
+    overflow: auto;
   }
 }

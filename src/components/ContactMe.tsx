@@ -1,4 +1,4 @@
-import { Box, Button, Input, Stack, Typography } from "@mui/joy";
+import { Box, Button, Input, Stack, Textarea, Typography } from "@mui/joy";
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -23,7 +23,7 @@ function ContactMe() {
         
         const form = e.target as HTMLFormElement;
         const formDataToSend = new FormData(form);
-
+    
         const params = new URLSearchParams();
         formDataToSend.forEach((value, key) => {
             params.append(key, value.toString());
@@ -60,11 +60,13 @@ function ContactMe() {
             <Box component="form" name="contact" method="POST" data-netlify="true" 
                 onSubmit={handleSubmit}
             >
+                <input type="hidden" name="form-name" value="contact" />
+
                 <Typography level="title-lg">
                     Name
                 </Typography>
                 <Input 
-                    placeholder={formData.name}
+                    type="string"
                     onChange={handleChange}
                     required
                 /> <br />
@@ -72,15 +74,15 @@ function ContactMe() {
                     Email Address
                 </Typography>
                 <Input 
-                    placeholder={formData.email}
                     onChange={handleChange}
+                    type="email"
                     required
                 /> <br />
                 <Typography level="title-lg">
                     Message
                 </Typography>
-                <Input 
-                    placeholder={formData.message}
+                <Textarea
+                    minRows={4} 
                     onChange={handleChange}
                     required
                 /> <br />

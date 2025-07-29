@@ -29,18 +29,12 @@ function Experience() {
                 strengthened my ability to contribute effectively to both independent and team-based 
                 development projects.
             </Typography>
-            <Stack direction="row" 
+            <Stack direction="row" spacing={1}
                 sx={{
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                <Typography level="body-sm" color="primary" variant="soft" 
-                   sx={{ 
-                    display: 'flex', 
-                    padding: '5px',
-                    alignItems: 'center',
-                    marginTop: '5px'
-                  }}>
+                <Typography level="body-sm" color="primary" variant="soft" className="skills">
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     : Full Stack Development • React • Python • Flask • MySQL • AWS • Docker • Boto3 
                     • CI/CD • Stakeholder Communication
@@ -80,13 +74,8 @@ function Experience() {
                 me both technical growth and real-world exposure to professional software 
                 development.
             </Typography>
-            <Typography level="body-sm" color="primary" variant="soft" 
-                   sx={{ 
-                    display: 'inline-flex', 
-                    padding: '5px',
-                    alignItems: 'center',
-                    marginTop: '5px'
-                  }}>
+            <Typography level="body-sm" color="primary" variant="soft" className="skills"
+                sx={{ display: "inline-flex" }}>
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     : React • Javascript • GraphQL • PostgreSQL • Figma • Jest • Cross-functional 
                     Collaboration
@@ -109,13 +98,8 @@ function Experience() {
                 concepts clearly, think on my feet, and foster curiosity and confidence in young
                 students.
             </Typography>
-            <Typography level="body-sm" color="primary" variant="soft"
-                   sx={{ 
-                    display: 'inline-flex', 
-                    padding: '5px',
-                    alignItems: 'center',
-                    marginTop: '5px'
-                  }}>
+            <Typography level="body-sm" color="primary" variant="soft" className="skills"
+                sx={{ display: "inline-flex" }}>
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     :  Leadership • Management • Communication • Technical Instruction
                 </Typography>

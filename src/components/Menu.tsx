@@ -16,12 +16,12 @@ function Menu() {
 
     return (
         <Stack direction="row"
-            spacing={2}
+            spacing={1}
             sx={{
             justifyContent: "space-between",
             alignItems: "center",
         }}>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" spacing={1}>
                 <Avatar alt="Lizzie Jones" src={myImg} />
                 <Typography level="h3" sx={{display: 'flex', alignItems: 'center'}}>LJ</Typography>
             </Stack>

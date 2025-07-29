@@ -44,21 +44,16 @@ function LabNotebook({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
                     and real-world applications of AI.
                 </Typography>
             </Box>
-            <Stack direction="row" 
+            <Stack direction="row" spacing={1}
                 sx={{
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                <Typography level="body-sm" color="primary" variant="soft" 
-                   sx={{ 
-                    display: 'flex', 
-                    padding: '5px',
-                    alignItems: 'center'
-                  }}>
+                <Typography level="body-sm" color="primary" variant="soft" className="skills">
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     : Machine Learning • Python • Detectron2 • IEEE Big Data Publication
                 </Typography>
-                <Stack direction={"row"} spacing={2}>
+                <Stack direction={"row"} spacing={1}  sx={{overflow: 'auto'}}>
                     <Button 
                         variant="soft"
                         onClick={() =>

@@ -39,21 +39,16 @@ function Kanbas({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>}) {
                     authentication, and dynamic data management.
                 </Typography>
             </Box>
-            <Stack direction="row" 
+            <Stack direction="row" spacing={1}
                 sx={{
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                <Typography level="body-sm" color="primary" variant="soft" 
-                   sx={{ 
-                    display: 'flex', 
-                    padding: '5px',
-                    alignItems: 'center'
-                  }}>
+                <Typography level="body-sm" color="primary" variant="soft" className="skills">
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     : React • Javascript • Full Stack
                 </Typography>
-                <Stack direction={"row"} spacing={2}>
+                <Stack direction={"row"} spacing={1}  sx={{overflow: 'auto'}}>
                     <Tooltip title="backend" variant="plain">
                         <Button 
                             variant="soft"

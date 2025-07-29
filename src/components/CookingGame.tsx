@@ -42,21 +42,16 @@ function CookingGame({rowToggle} : {rowToggle: Dispatch<SetStateAction<boolean>>
                  the chef character’s body parts to the corresponding tracked points.
                 </Typography>
             </Box>
-            <Stack direction="row" 
+            <Stack direction="row" spacing={1}
                 sx={{
                     justifyContent: "space-between",
                     alignItems: "center",
                 }}>
-                <Typography level="body-sm" color="primary" variant="soft" 
-                   sx={{ 
-                    display: 'flex', 
-                    padding: '5px',
-                    alignItems: 'center'
-                  }}>
+                <Typography level="body-sm" color="primary" variant="soft" className="skills">
                     <span style={{fontWeight: "bold"}}>Skills</span>
                     : Computer Vision • Morphological Processing • Python
                 </Typography>
-                <Stack direction={"row"} spacing={2}>
+                <Stack direction={"row"} spacing={1}  sx={{overflow: 'auto'}}>
                     <Button 
                         variant="soft"
                         onClick={() =>
