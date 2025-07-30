@@ -66,6 +66,7 @@ function ContactMe() {
                     Name
                 </Typography>
                 <Input 
+                    name="name"
                     type="string"
                     onChange={handleChange}
                     required
@@ -74,6 +75,7 @@ function ContactMe() {
                     Email Address
                 </Typography>
                 <Input 
+                    name="email"
                     onChange={handleChange}
                     type="email"
                     required
@@ -82,6 +84,7 @@ function ContactMe() {
                     Message
                 </Typography>
                 <Textarea
+                    name="message"
                     minRows={4} 
                     onChange={handleChange}
                     required
