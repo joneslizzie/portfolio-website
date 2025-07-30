@@ -39,5 +39,13 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+      
+    <!-- File with a dummy form to trigger Netlifys form submission -->
+
+      <form name="contact" netlify hidden>
+        <input type="text" name="name" />
+        <input type="text" name="email" />
+        <textarea name="message"></textarea>
+      </form>
   </body>
 </html>
