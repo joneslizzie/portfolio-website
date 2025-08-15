@@ -51,7 +51,7 @@ function HomePage() {
                 </Typography>
                 <Typography level="body-lg">
                     Outside of coding, I love to travel! I first traveled outside of the US for 
-                    my semester abroad at University of Sydney, and have now been to 7 other 
+                    my semester abroad at University of Sydney, and have now been to 6 other 
                     countries. Travel has broadened my perspective and made me curious about how 
                     people live their lives and learn in different cultures. In my day-to-day life, 
                     I enjoy reading, running, and practicing yoga. I'm also passionate about 
