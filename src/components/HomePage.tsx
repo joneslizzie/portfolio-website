@@ -33,9 +33,8 @@ function HomePage() {
                     Hi, I'm Lizzie Jones. Welcome to my portfolio!
                 </Typography>
                 <Typography level="body-lg">
-                    I'm a computer science student at Northeastern University, and will be 
-                    graduating in December 2025, with a concentration in Software and minor in 
-                    Mathematics.
+                    I graduated from Northeastern University in December of 2025 with a B.S. in Computer 
+                    Science, a concentration in Software, and minor in Mathematics.
                     I am passionate about programming, creative problem solving, and building things 
                     that people enjoy using. I especially love projects that combine logic, design, and
                     a bit of math. I'm a curious, hardworking and driven individual who's always excited
